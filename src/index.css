@@ -15,3 +15,229 @@
   transform-origin: center center;
   transform: scale(1.2);
 }
+
+@keyframes handAnimation {
+  0% {
+    opacity: 0;
+    transform: "rotate(30deg)";
+  }
+  10% {
+    opacity: 1;
+    transform: "rotate(30deg)";
+  }
+  40% {
+    opacity: 1;
+    transform: "rotate(30deg)";
+  }
+  50% {
+    opacity: 0;
+    transform: "rotate(30deg)";
+  }
+  100% {
+    opacity: 0;
+    transform: "rotate(30deg)";
+  }
+}
+
+/* @keyframes arrowAnimation {
+  0% {
+    stroke-dashoffset: 500;
+    opacity: 0;
+  }
+
+  40% {
+    stroke-dashoffset: 500;
+    opacity: 0;
+  }
+  50% {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+
+  60% {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+
+  70% {
+    stroke-dashoffset: 0;
+    opacity: 0;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    opacity: 0;
+  }
+} */
+
+@keyframes pinchAnimation {
+  0% {
+    opacity: 0;
+  }
+
+  55% {
+    opacity: 0;
+  }
+
+  60% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes arrowAnimation {
+  0% {
+    opacity: 0;
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+
+  40% {
+    opacity: 0;
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+  50% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 0;
+    transform: rotate(-45deg) translate(-5px, 5px);
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(-45deg) translate(-5px, 5px);
+  }
+}
+
+@keyframes buttonAnimation {
+  0% {
+    opacity: 0;
+  }
+
+  55% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes hitAnimation {
+  0% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 1;
+    transform: scale(0);
+  }
+  85% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1);
+  }
+}
+
+.arrow {
+  position: absolute;
+  top: calc(50% - 24px);
+  left: calc(50% - 12px);
+  transform: rotate(-90deg);
+  cursor: pointer;
+}
+
+.arrow span {
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-bottom: 3px solid black;
+  border-left: 3px solid black;
+  transform: rotate(45deg);
+  margin: -5px;
+  animation: arrowAnimation 4s infinite;
+}
+
+.arrow span:nth-child(2) {
+  animation-delay: -0.2s;
+}
+
+.arrow span:nth-child(3) {
+  animation-delay: -0.4s;
+}
+
+.hand-animation {
+  animation: handAnimation 4s linear forwards infinite;
+}
+
+.arrow-animation {
+  animation: arrowAnimation 4s linear forwards infinite;
+}
+
+.pinch-animation {
+  animation: pinchAnimation 4s linear forwards infinite;
+  z-index: 100;
+  position: relative;
+}
+
+.button-animation {
+  animation: buttonAnimation 4s linear forwards infinite;
+  border: none;
+  border-radius: 4px;
+  padding: 3px;
+  background-color: #0084e6ff;
+  opacity: 1;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 40px;
+  position: absolute;
+  top: calc(50% - 20px);
+  right: 40px;
+}
+
+.hit {
+  position: absolute;
+  top: calc(50% - 40px);
+  right: 130px;
+}
+
+.hit div {
+  animation: hitAnimation 4s linear forwards infinite;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: purple;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.hit div:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.hit div:nth-child(2) {
+  animation-delay: -0.2s;
+}
+
+.hit div:nth-child(3) {
+  animation-delay: -0.4s;
+}

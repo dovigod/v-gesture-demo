@@ -3,7 +3,7 @@ import { TransitionBox } from "./TransitionBox";
 import { VGesture } from "@dvgs/vgesture";
 import { ClickGesturePlugin } from "@dvgs/vgesture/plugins";
 import { useState, useEffect } from "react";
-
+import { Introduction } from "./Introduction";
 function App() {
   const [gesture] = useState(new VGesture({ enableHelper: true }));
 
@@ -37,6 +37,7 @@ function App() {
         <TransitionBox color="var(--crimson-10)" />
         <TransitionBox color="var(--lime-10)" />
       </Grid>
+      <Introduction />
     </>
   );
 }
