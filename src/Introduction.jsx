@@ -16,7 +16,7 @@ export function Introduction() {
         height="100vh"
         style={{ backgroundColor: "rgba(0,0,0,0.4)" }}
       >
-        <Card size="5" variant="classic">
+        <Card size="5" variant="classic" style={{ minWidth: "400px" }}>
           <Text
             style={{
               fontSize: "24px",
@@ -27,7 +27,7 @@ export function Introduction() {
           >
             <b>Pinch</b> with <b>left</b> hand to Click!
           </Text>
-          <Flex minWidth="400px" maxWidth="800px" width="10vw">
+          <Flex minWidth="300px" maxWidth="800px" width="100%">
             <Box
               width="100%"
               height="200px"
@@ -48,34 +48,26 @@ export function Introduction() {
                   position: "absolute",
                   top: "calc(50% - 40px)",
                   left: "40px",
-                  transform: "rotate(30deg)",
                   opacity: 0,
                 }}
                 className="hand-animation"
               />
-
-              <div className="arrow">
-                <span></span>
-                <span></span>
-                <span></span>
-              </div>
-
               <img
                 src="/pinch.png"
                 width="60px"
                 height="60px"
                 style={{
                   objectFit: "cover",
-                  transformOrigin: "center center",
                   position: "absolute",
-                  top: "calc(50% - 30px)",
+                  top: "50%",
                   opacity: 0,
-                  right: "40px",
+                  left: "calc(50% - 16px)",
+                  transform: "translate(-50%, -50%)",
                 }}
                 className="pinch-animation"
               />
 
-              <div className="button-animation">Button</div>
+              <div className="intro-button">Button</div>
 
               <div className="hit">
                 <div />
